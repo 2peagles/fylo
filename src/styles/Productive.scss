@@ -1,0 +1,78 @@
+@import "global";
+
+* {
+    box-sizing: border-box;
+    // border:1px solid white;
+}
+
+.productive {
+    min-height: 80vh;
+    padding: 1rem;
+    margin: 3rem 0;
+    display: flex;
+    align-items: center;
+    text-align: left;
+     justify-content:center;
+    img{
+        float:left;
+        padding-right:3rem;
+    }
+    .content{
+        float: right;
+        h2 {
+            width:240px;
+            font: {
+                family: $fontfamily;
+                weight: 700;
+            }
+        }
+
+        p {
+            width:500px;
+            color: rgba(255, 255, 255, 0.615);
+            font: {
+                family: $fontbody;
+                weight: 400;
+                size: 14px;
+            }
+        }
+        button{
+            cursor: pointer;
+            padding:0 ;
+            color:$cyan;
+            border:none;
+            border-bottom: 1px solid $cyan;
+            background-color: transparent;
+            &:hover{
+                color:$white;
+                border-bottom: 1px solid $white;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:430px) and (max-height:1000px) {
+.productive {
+        padding: 2rem;
+        margin: 4rem 0 0;
+        display: block;
+
+        img {
+            float: none;
+            width:330px;
+            padding-right:0;
+            padding-bottom:1.4rem;
+        }
+
+        .content {
+            float:none;
+            h2{
+                width:fit-content;
+                font-size: 20px;
+            }
+            p {
+                width: 330px;
+            }
+        }
+    }
+}

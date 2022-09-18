@@ -1,0 +1,88 @@
+@import "global";
+
+* {
+    box-sizing: border-box;
+    // border:1px solid white;
+}
+
+.testimonials {
+    min-height: 20vh;
+    padding: 1rem 1rem 25rem 1rem;
+    // margin: 3rem 0;
+    place-items:center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px 0;
+    grid-auto-rows: minmax(100px, auto);
+    .quotebg{
+        position: relative;
+    }
+    .quotebg::before {
+            content: ' ';
+            background: url("../assets/images/bg-quotes.png") no-repeat ;
+            position: absolute;
+            z-index: -1;
+            top:-2.2rem;
+            left: -.6rem;
+            height: 70px;
+            width: 70px;
+            // background-color: white;
+    }
+    .col {
+        padding:2rem;
+        display: flex;
+        align-items: center;
+        text-align: left;
+        justify-content: center;
+        flex-direction: column;
+        width: 360px;
+        background-color: $testimonialsbg;
+
+        h3 {
+            padding:0;
+            margin:0;
+            font: {
+                    family: $fontbody;
+                    weight: 400;
+                    size: 14px;
+                }
+            }
+        p {
+            color: rgba(255, 255, 255, 0.615);
+            font: {
+                family: $fontbody;
+                weight: 400;
+                size: 14px;
+            }
+        }
+        .profile{
+            columns: 2;
+            column-width: 200px;
+                img {
+                        height: 40px;
+                        border-radius: 10rem;
+                        column-width: 100px;
+                    }
+            p {
+                padding:0 0 0 0;
+                margin: 0;
+                column-width: 200px;
+                color: rgba(255, 255, 255, 0.615);
+            }
+        }
+    }
+}
+
+@media screen and (max-width:430px) and (max-height:1000px) {
+
+    .testimonials {
+        padding: 5rem .5rem 1rem;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+
+        .col {
+            padding:1.5rem;
+            width: 320px;
+        }
+    }
+}

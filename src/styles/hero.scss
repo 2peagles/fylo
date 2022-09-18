@@ -1,0 +1,123 @@
+@import "global";
+
+* {
+    box-sizing: border-box;
+    // border:1px solid white;
+}
+.hero {
+    width:100%;
+    overflow: hidden;
+    color:$white;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: $darkblueintrobg;
+    background-repeat: no-repeat;
+    // background-position:bottom;
+    background-position-y: 100%;
+    background-size: contain;
+    background-position: bottom;
+    background-image: url("../assets/images/bgcurvydesktop.svg");
+    .nav{
+        width:100%;
+        padding:0;
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        overflow: hidden;
+        top: 0;
+        padding: 0 2rem;
+        //  position:absolute;
+         svg{
+            height: 70px;
+            width:150px;
+         }
+         ol ,.links{
+                padding: 0 0 0 0;
+                width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: right;
+        }
+    li {
+        cursor: pointer;
+        display: inline-block;
+        padding: 1rem;
+        position: relative;
+        color:rgba(255, 255, 255, 0.515);
+        &:hover{
+            color:$white;
+            text-decoration: underline;
+        }
+        font: { 
+            family:$fontfamily;
+            weight:400;
+            size:14px;
+        }
+    }
+}
+img{
+    width:500px;
+}
+h1{
+    width:600px;
+    line-height: 3rem;
+    font: {
+        family: $fontfamily;
+         weight:700;   
+    }
+}
+p {
+    width:400px;
+    line-height: 1.6rem;
+    font: {
+        family: $fontbody;
+        weight: 400;
+        size: 14px;
+    }
+}
+button{
+     cursor: pointer;
+    background: linear-gradient( to right, $cyan,  $blue);
+    padding:10px 50px;
+    border: none;
+    border-radius: 20px;
+    color:$white;
+    &:hover{
+        background:$cyan;
+        transition: 3s;
+    }
+    font: {
+        family: $fontfamily;
+        weight:700;
+    }
+}
+}
+@media screen and (max-width:430px) and (max-height:1000px){
+   .hero{
+        background-position: bottom;
+        background-image: url("../assets/images/bgcurvymobile.svg");
+        .nav{
+            padding:0 1rem;
+            svg {
+                    height: 50px;
+                    width:120px;
+                }
+                li{
+                    padding:.5rem;
+                }
+        }
+    img{
+        width:340px;
+    }
+    h1{
+        max-width:350px;
+        font-size: 25px;
+    }
+    p{
+        max-width:300px;
+    }
+   }
+}
