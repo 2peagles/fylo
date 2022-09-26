@@ -4,7 +4,7 @@ import { Footer } from './components/Footer'
 import { Grid } from './components/Grid'
 import { Productive } from './components/Productive'
 import { Testimonials } from './components/Testimonials'
-import { Form } from './components/Form'
+// import { Form } from './components/Form'
 
 function App() {
 
@@ -14,7 +14,7 @@ function App() {
       <Grid />
       <Productive />
       <Testimonials />
-      <Form />
+      {/* <Form /> */}
       <Footer />
     </div>
   )
