@@ -11,10 +11,8 @@
     color: rgba(255, 255, 255, 0.615);
     background-color: $footerbg;
     min-height:50vh;
-        display: grid;
-            grid-template-columns: 4fr 1fr 1fr;
-            // gap: 50px 0;
-            // grid-auto-rows: minmax(100px, auto);
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr;
     font-size: $fontsize;
        ul li, ol li {
             list-style-type: none;
@@ -29,15 +27,17 @@
     }
     .info{
                  ol {
-                       columns: 2;
-                       padding: 1rem;
-        
+                    width:750px;
+                    // border:2px solid white;
+                       columns: 2;   
+                        padding: 1rem; 
                        li {
+                        width:fit-content;
                            line-height: 1.3rem;
-                           padding: 0 2rem;
-                        &:hover {
-                                color: $white;
-                            }
+                        //    padding: 0 2rem;
+                                    &:hover {
+                                    color: $white;
+                                 }
                            svg {
                             width:150px;
                             height:50px;
@@ -67,7 +67,7 @@
                   padding:1rem;
                     li {
                         line-height: 2.5rem;
-                        padding: 0 2rem;
+                        padding: 0 1rem;
                         &:hover {
                                 color: $white;
                             }
@@ -105,6 +105,7 @@
             .info {
                 ol {
                     columns: 1;
+                    width:100%;
                 }
             }
     
